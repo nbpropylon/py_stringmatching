@@ -1,3 +1,7 @@
+v0.4.7 - 2/14/2026
+  * Migrated build to pyproject.toml (PEP 517/621); setup.py retained for Cython extensions only.
+  * Dropped custom build_ext and setuptools auto-install; use numpy.get_include() for extension builds.
+
 v0.4.6 - 7/5/2024
   * Limited Numpy to <2.0 in setup.py, due to compatibility issues
   * Added preliminary testing of pip install to Github Actions workflow

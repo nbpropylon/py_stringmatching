@@ -32,5 +32,6 @@ jobs:
           pip install "Cython>=0.29.23" "coveralls"
       - name: Install package
         run: |
-          python setup.py sdist
-          pip install dist/py-stringmatching-0.4.6.tar.gz
+          pip install build
+          python -m build --sdist
+          pip install dist/*.tar.gz
