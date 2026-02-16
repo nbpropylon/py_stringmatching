@@ -1,4 +1,5 @@
-# Testing on linux, windows, macos, for python versions 3.7, 3.8, 3.9, 3.10, 3.11, 3.12
+# Testing on linux, windows, macos, for python versions 3.8, 3.9, 3.10, 3.11, 3.12
+# Note: Python 3.7 support was dropped as it reached End of Life (EOL) on June 27, 2023
 
 name: Test pip install
 
@@ -8,11 +9,10 @@ on:
 
 jobs:
   build:
-
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11", "3.12"]
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
         os: ["ubuntu-latest", "windows-latest", "macos-latest"]
     runs-on: ${{ matrix.os }}
     env:

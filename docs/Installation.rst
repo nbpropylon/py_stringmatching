@@ -4,7 +4,7 @@ Installation
  
 Requirements
 ------------
-    * Python 3.7-3.11
+    * Python 3.8-3.11 (Python 3.7 support was dropped as it reached End of Life (EOL) on June 27, 2023)
     * C or C++ compiler (parts of the package are in Cython for efficiency reasons, and you need C or C++ compiler to compile these parts)
 
 Platforms
