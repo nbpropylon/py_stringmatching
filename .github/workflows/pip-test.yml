@@ -34,4 +34,4 @@ jobs:
         run: |
           pip install build
           python -m build --sdist
-          pip install dist/*.tar.gz
+          python -c "import glob, subprocess, sys; files = glob.glob('dist/*.tar.gz'); assert files, 'No .tar.gz files found in dist/'; subprocess.check_call([sys.executable, '-m', 'pip', 'install'] + files)"
