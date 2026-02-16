@@ -31,7 +31,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install "numpy<2.0" "Cython>=0.29.23" "coveralls"
       - name: Install package
-        run: python setup.py build_ext --inplace
+        run: pip install -e .
       - name: Run tests
         run: |
           python -m unittest -v
